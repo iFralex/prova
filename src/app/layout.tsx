@@ -1,28 +1,31 @@
+import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import { Header } from "./components";
 
-export const metadata = {
-  title: "Unica Jewelry",
-  description: "Ecommerce di Unica",
+export const metadata: Metadata = {
+  title: "Next.js on Firebase App Hosting",
+  description: "",
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" suppressHydrationWarning>
-      <body className={inter.className}>
-        <p>ciao da layout</p>
+    <html lang="en" className="dark-theme">
+      <head>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <div className="dots" />
+        <Header />
         {children}
+        <div className="bottom-gradient" />
       </body>
     </html>
   );
-}
-
-async function NavBar({ user }: { user?: DecodedIdToken }) {
-  const categories = await getCategories()
-  if (categories instanceof Error)
-    return <div>Errore: {categories.message}</div>
-
-  //const itemsInCart = await getCookie<CartType[]>("cart")
-  return <NavBarStyled categories={categories} account={user} />
 }
