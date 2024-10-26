@@ -6,6 +6,7 @@ const PUBLIC_PATHS = ['/registrazione', '/login'];
 const PRIVATE_PATHS = ["/dashboard"]
 
 export async function middleware(request: NextRequest) {
+  return NextResponse.next()
   return authMiddleware(request, {
     loginPath: "/api/login",
     logoutPath: "/api/logout",

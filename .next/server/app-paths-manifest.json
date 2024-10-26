@@ -1,1 +1,14 @@
-{}
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/check-out/page": "app/check-out/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js",
+  "/gioielli-di-luce/page": "app/gioielli-di-luce/page.js",
+  "/registrazione/page": "app/registrazione/page.js",
+  "/preferiti/page": "app/preferiti/page.js",
+  "/signin-mail-link/page": "app/signin-mail-link/page.js",
+  "/recupera-password/page": "app/recupera-password/page.js",
+  "/dashboard/ordini/[orderId]/page": "app/dashboard/ordini/[orderId]/page.js",
+  "/dashboard/account/page": "app/dashboard/account/page.js",
+  "/dashboard/ordini/page": "app/dashboard/ordini/page.js"
+}
