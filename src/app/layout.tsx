@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { Header } from "./components";
 
 export const metadata: Metadata = {
   title: "Next.js on Firebase App Hosting",
@@ -22,7 +21,6 @@ export default function RootLayout({
       </head>
       <body>
         <div className="dots" />
-        <Header />
         {children}
         <div className="bottom-gradient" />
       </body>
