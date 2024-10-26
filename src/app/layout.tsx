@@ -20,9 +20,8 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="dots" />
+        <p>Ciao da Layout</p>
         {children}
-        <div className="bottom-gradient" />
       </body>
     </html>
   );
